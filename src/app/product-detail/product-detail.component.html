@@ -1,1 +1,32 @@
-<p>product-detail works!</p>
+<div class="product_details">
+    <div class="container">
+        <p class="title">Product details</p>
+        <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src={{item.image}} alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4"> $ {{item.price}}</p>
+              
+                </div>
+              </div>
+          
+              <div class="content">
+             <p class="title">{{item.title}}</p>
+             
+    <p> <strong>{{item.desc}}</strong></p>
+               <button class="button is-fullwidth is-warning" (click)="selectProduct(item)">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -53,9 +53,20 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  selectProduct(p){
+  selectProduct(product){
    // console.log("product selected")
-    this.router.navigate(['product-detail'])
+    //this.router.navigate(['product-detail', product.id]);
+
+    let navigationExtras: NavigationExtras ={
+      queryParams:{
+        'id': product.id
+      },
+  
+      state:{
+        item: product
+      }
+    }
+    this.router.navigate(['product-detail'], navigationExtras)
   }
 
 }
