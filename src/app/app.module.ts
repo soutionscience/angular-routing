@@ -7,14 +7,16 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { ErrorComponent } from './error/error.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AdminDetailsComponent } from './admin-details/admin-details.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AdminComponent,
     ErrorComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
